@@ -1,9 +1,10 @@
-div{
-    background-color: #2DB38C;
+.Header{
+    background-color: #76FF77;
     font-size: 25pt;
     margin-top: auto;
-    height: 100px;
+    height: 85px;
     line-height: 100px;
-    text-align: left;
+    text-align: center;
     padding-left: 1%;
+    font-family: 'M PLUS 1 Code', sans-serif;
 }
