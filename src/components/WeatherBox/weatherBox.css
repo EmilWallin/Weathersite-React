@@ -1,22 +1,31 @@
-.WeatherDiv{
+.WeatherDiv {
     display: inline-block;
+    position: fixed;
     background-color: white;
     color: black;
-    font-family: 'Comfortaa', cursive;
+    font-family: "Comfortaa", cursive;
     font-weight: 700;
     font-size: 24pt;
     width: 50%;
-    margin: 10%;
-    border-radius: 100%;
-    
 }
 
-.WeatherText{
+.WeatherBox {
+    position: fixed;
+    margin: 0;
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 120px;
+    z-index: -1;
+}
+
+.WeatherText {
     margin: 0;
     float: left;
 }
 
-.TempText{
+.TempText {
     margin: 0;
     float: right;
 }

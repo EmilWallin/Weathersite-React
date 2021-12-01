@@ -1,0 +1,26 @@
+.RainDrop{
+    content: "";
+    position:absolute;
+    background-color: #008cff;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: falling 1s infinite;
+    z-index: -2;
+    display: inline-block;
+
+}
+
+@keyframes falling {
+    from {
+        top: 120px;
+        opacity: 1;
+    }
+    50% {
+        top:30%;
+    }
+    to {
+        top: 50%;
+        opacity: 0;
+    }
+}

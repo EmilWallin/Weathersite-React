@@ -1,0 +1,57 @@
+.cloud {
+    position: flex;
+
+    margin: auto;
+    width: 400px;
+    height: 110px;
+    background: rgb(106, 108, 110);
+    box-shadow: 10px 10px (rgba(0, 0, 0, 0, 2));
+    border-radius: 300px;
+    animation: floating 5s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes floating {
+    from {
+        transform: scale(1);
+        transform: translateX(-10px);
+        margin-top: 110px;
+    }
+    25% {
+        margin-top: 108px;
+    }
+    50% {
+        margin-top: 112px;
+    }
+    75% {
+        margin-top: 108px;
+    }
+    to {
+        transform: scale(1.03);
+        transform: translateX(10px);
+        margin-top: 110px;
+    }
+}
+
+.cloud:after,
+.cloud:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: inherit;
+    border-radius: inherit;
+}
+
+.cloud:after {
+    width: 35%;
+    height: 120%;
+    top: -52%;
+    left: 15%;
+}
+
+.cloud:before {
+    width: 45%;
+    height: 160%;
+    top: -80%;
+    left: 40%;
+}
