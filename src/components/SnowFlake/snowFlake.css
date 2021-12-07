@@ -1,0 +1,31 @@
+.SnowFlake {
+    content: "";
+    position: absolute;
+    background-color: #f1f0f0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: falling 2s infinite linear;
+    z-index: -2;
+    box-shadow: 0px -12px 4px #ffffff;
+    display: inline-block;
+    opacity: 0;
+}
+
+@keyframes falling {
+    from {
+        top: 120px;
+        opacity: 1;
+    }
+    50% {
+        top: 20%;
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.7
+    }
+    to {
+        top: 50%;
+        opacity: 0.2;
+    }
+}

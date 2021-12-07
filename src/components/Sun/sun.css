@@ -1,0 +1,37 @@
+.sun {
+    position: block;
+    margin: auto;
+    width: 350px;
+    height: 320px;
+    background: #fbff00;
+    border-radius: 50%;
+    animation: floatingSun 5s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes floatingSun {
+    from {
+        transform: scale(1);
+        transform: translateX(-10px);
+        margin-top: -200px;
+        box-shadow: 20px 20px 15px 10px #fbff00;
+    }
+    25% {
+        margin-top: -198px;
+    }
+    50% {
+        margin-top: -200px;
+        box-shadow: 0px 15px 15px 10px #fbff00;
+
+    }
+    75% {
+        margin-top: -202px;
+    }
+    to {
+        transform: scale(1.03);
+        transform: translateX(10px);
+        margin-top: -200px;
+        box-shadow: -20px 20px 15px 10px #fbff00;
+
+    }
+}

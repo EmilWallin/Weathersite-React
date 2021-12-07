@@ -1,14 +1,16 @@
 import React from 'react';
 
-import './weatherBox.css';
-
 //Array
 import conditionsArray from "../WeatherConditions";
 
 //Components
+import './weatherBox.css';
 import RainCloud from '../RainCloud';
+import SnowCloud from '../SnowCloud';
+import Sun from '../Sun';
 //Hook
 import useGetVisuals from '../../hooks/useGetWeatherVisuals';
+
 
 function GetVisuals(weatherType, weatherAmount) {
     let amount = 0;
@@ -31,9 +33,9 @@ function GetVisuals(weatherType, weatherAmount) {
         case "rain":
             return (<RainCloud amount={{value: amount}}/>)
         case "snow":
-            return (<div>snow {weatherAmount}</div>)
+            return (<SnowCloud amount={{value: amount}}></SnowCloud>)
         case "sun":
-            return (<div>sun {weatherAmount}</div>)
+            return (<Sun></Sun>)
         case "clear":
             return (<div>clear {weatherAmount}</div>)
         case "cloudy":
@@ -52,7 +54,6 @@ export const WeatherBox = ({weather, temp}) => {
             {
                 GetVisuals(weatherType, weatherAmount)
             }
-
             <div className="WeatherDiv" key={weather}>
                 <p className="WeatherText">{weather}</p>
                 <p className="TempText">{temp}</p>

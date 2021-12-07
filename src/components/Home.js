@@ -5,6 +5,8 @@ import "../fonts.css";
 //API call
 //import CallAPI from './APICall';
 
+import "../App.css";
+
 //Components
 import Header from "./Header";
 import SearchBar from "./SearchBar";
@@ -17,7 +19,7 @@ const Home = () => {
     const { location, weather, temperature, setLocation } = useWeatherFecth();
 
     return (
-        <div className="App">
+        <div className="HomePage">
             <div>
                 <Header />
                 <SearchBar setSearchTerm={setLocation} />

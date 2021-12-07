@@ -1,12 +1,12 @@
 import react from "react";
-import "./rainCloud.css";
-import RainDrop from "../RainDrop";
+import "./snowCloud.css";
+import SnowFlake from "../SnowFlake";
 
 const randomTime = function (time) {
     return Math.random() * time;
 };
 
-const RainCloud = ({amount}) => {
+const SnowCloud = ({amount}) => {
     let nums = [amount.value];
     for (let i = -amount.value/2; i < amount.value/2; i++) {
         nums[i + amount.value/2] = i;
@@ -14,14 +14,14 @@ const RainCloud = ({amount}) => {
 
     return (
         <div>
-            <div className="cloud"></div>
+             <div className="cloud" style={{background: "AliceBlue"}}></div>
             {nums.map(function (n) {
                 return (
-                    <RainDrop key={n} offset={{ value: n*1.7, delay: randomTime(1) }} />
+                    <SnowFlake key={n} offset={{ value: n*1.7, delay: randomTime(1) }} />
                 );
-            })}
+            })} 
         </div>
     );
 };
 
-export default RainCloud;
+export default SnowCloud;
