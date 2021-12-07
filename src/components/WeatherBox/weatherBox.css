@@ -1,17 +1,18 @@
 .WeatherDiv {
     display: inline-block;
-    position: fixed;
-    background-color: white;
+    position: absolute;
     color: black;
     font-family: "Comfortaa", cursive;
     font-weight: 700;
     font-size: 24pt;
     width: 50%;
+    z-index: 1;
+    margin: auto;
 }
 
 .WeatherBox {
     position: fixed;
-    margin: 0;
+    margin: auto;
     background-color: whitesmoke;
     height: 100%;
     width: 100%;

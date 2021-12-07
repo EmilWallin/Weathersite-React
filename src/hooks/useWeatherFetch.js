@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 
 import API from '../APICall';
 
@@ -34,3 +34,4 @@ export const useWeatherFecth = () => {
 
     return {location, weather, temperature, setLocation};
 }
+

@@ -1,4 +1,4 @@
-const weatherConditions = [
+export const weatherConditions = [
     "Sunny",
     "Clear",
     "Cloudy",
@@ -47,6 +47,21 @@ const weatherConditions = [
     "Moderate or heavy rain with thunder",
     "Patchy light snow with thunder",
     "Moderate or heavy snow with thunder"
+]
+
+export const amount = [
+    "light",
+    "moderate",
+    "heavy"
+]
+
+export const type = [
+    "rain",
+    "snow",
+    "sun",
+    "clear",
+    "cloudy"
+
 ]
 
 export default weatherConditions;

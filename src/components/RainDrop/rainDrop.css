@@ -1,14 +1,15 @@
-.RainDrop{
+.RainDrop {
     content: "";
-    position:absolute;
+    position: absolute;
     background-color: #008cff;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
-    animation: falling 1s infinite;
+    animation: falling 0.8s infinite linear;
     z-index: -2;
+    box-shadow: 0px -12px 4px #008cff;
     display: inline-block;
-
+    opacity: 0;
 }
 
 @keyframes falling {
@@ -17,10 +18,14 @@
         opacity: 1;
     }
     50% {
-        top:30%;
+        top: 20%;
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.7
     }
     to {
         top: 50%;
-        opacity: 0;
+        opacity: 0.2;
     }
 }
