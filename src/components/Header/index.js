@@ -5,7 +5,7 @@ import SearchBar from '../SearchBar';
 const Header = () => {
     return (
         <div className='Header'>
-            WeatherNow
+            Weather
         </div>
     )
 }
