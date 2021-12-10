@@ -60,7 +60,9 @@ export const type = [
     "snow",
     "sun",
     "clear",
-    "cloudy"
+    "cloudy",
+    "overcast",
+    "fog"
 
 ]
 

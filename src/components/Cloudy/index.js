@@ -1,13 +1,16 @@
 import react from "react";
 import "./cloudy.css";
 
-const Cloudy = ({amount}) => {
+const Cloudy = ({ amount }) => {
     return (
         <div>
-            <div className="bigShadow"></div>
-            <div className="cloud"></div>
-            <div className="smallShadow"></div>
-            <div className="smallCloud"></div>
+            <div className="bigShadow">
+                <div className="cloud"></div>
+            </div>
+
+            <div className="smallShadow">
+                <div className="smallCloud"></div>
+            </div>
         </div>
     );
 };
