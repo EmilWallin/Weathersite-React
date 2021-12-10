@@ -1,4 +1,4 @@
-.cloud {
+.rainCloud {
     position: block;
     margin: auto;
     width: 400px;
@@ -32,8 +32,8 @@
     }
 }
 
-.cloud:after,
-.cloud:before {
+.rainCloud:after,
+.rainCloud:before {
     content: "";
     position: absolute;
     display: inline-block;
@@ -41,14 +41,14 @@
     border-radius: inherit;
 }
 
-.cloud:after {
+.rainCloud:after {
     width: 35%;
     height: 120%;
     top: -52%;
     left: 15%;
 }
 
-.cloud:before {
+.rainCloud:before {
     width: 45%;
     height: 160%;
     top: -80%;

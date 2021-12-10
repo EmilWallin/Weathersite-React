@@ -4,6 +4,8 @@
     border-radius: 0% 0% 100% 100%;
     min-height: 30px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .InputBar {
@@ -16,5 +18,4 @@
     margin-bottom: 1%;
     font-family: 'M PLUS 1 Code', sans-serif;
     font-weight: 300;
-    
 }

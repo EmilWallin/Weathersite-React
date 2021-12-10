@@ -1,0 +1,175 @@
+.cloud {
+    content: "";
+    position: block;
+    margin: auto;
+    width: 256px;
+    height: 80px;
+    background: #d1dae2;
+    border-radius: 300px;
+    animation: floatingCloudy 5s infinite;
+    animation-direction: alternate;
+}
+
+
+
+.cloud:after,
+.cloud:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: inherit;
+    border-radius: inherit;
+    z-index:-1;
+}
+
+.cloud:after {
+    width: 35%;
+    height: 120%;
+    top: -52%;
+    left: 15%;
+}
+
+.cloud:before {
+    width: 45%;
+    height: 160%;
+    top: -80%;
+    left: 40%;
+}
+
+.bigShadow {
+    content: "";
+    position: absolute;
+    margin: auto;
+    width: 256px;
+    height: 80px;
+    left: 38%;
+    top: 0.9%;
+
+    background: #727679;
+    border-radius: 300px;
+    animation: floatingCloudy 5s infinite;
+    animation-direction: alternate;
+}
+
+.bigShadow:after,
+.bigShadow:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: inherit;
+    border-radius: inherit;
+    z-index:-1;
+}
+
+.bigShadow:after {
+    width: 35%;
+    height: 120%;
+    top: -52%;
+    left: 15%;
+}
+
+.bigShadow:before {
+    width: 45%;
+    height: 160%;
+    top: -80%;
+    left: 40%;
+}
+
+.smallCloud {
+    position: absolute;
+    margin: 0;
+
+    /*  SIZERATIO: 3.2 */
+    width: 208px;
+    height: 65px;
+    background: #c7d2dd;
+    border-radius: 300px;
+    animation: floatingCloudy 5s infinite;
+    animation-direction: alternate;
+
+    top: 4%;
+    left: 48%;
+}
+
+.smallCloud:after,
+.smallCloud:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: inherit;
+    border-radius: inherit;
+    box-shadow: inherit;
+
+}
+.smallCloud:after {
+    width: 35%;
+    height: 120%;
+    top: -52%;
+    left: 15%;
+}
+.smallCloud:before {
+    width: 45%;
+    height: 160%;
+    top: -80%;
+    left: 40%;
+}
+
+.smallShadow {
+    position: absolute;
+    margin: 0;
+
+    /*  SIZERATIO: 3.2 */
+    width: 208px;
+    height: 65px;
+    background: #727679;
+    border-radius: 300px;
+    animation: floatingCloudy 5s infinite;
+    animation-direction: alternate;
+    top: 4.8%;
+    left: 48.7%;
+}
+.smallShadow:after,
+.smallShadow:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: inherit;
+    border-radius: inherit;
+    box-shadow: inherit;
+
+}
+.smallShadow:after {
+    width: 35%;
+    height: 120%;
+    top: -52%;
+    left: 15%;
+}
+.smallShadow:before {
+    width: 45%;
+    height: 160%;
+    top: -80%;
+    left: 40%;
+}
+
+
+@keyframes floatingCloudy {
+    from {
+        transform: scale(1);
+        transform: translateX(-10px);
+        margin-top: 96px;
+    }
+    25% {
+        margin-top: 94px;
+    }
+    50% {
+        margin-top: 98px;
+    }
+    75% {
+        margin-top: 94px;
+    }
+    to {
+        transform: scale(1.03);
+        transform: translateX(10px);
+        margin-top: 96px;
+    }
+}

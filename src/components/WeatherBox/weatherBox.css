@@ -1,10 +1,10 @@
 .WeatherDiv {
-    display: flexbox;
+    display:inline-block;
+    position:relative;
     color: black;
     font-family: "Comfortaa", cursive;
     font-weight: 700;
     font-size: 22pt;
-    z-index: 1;
     margin: auto;
     text-align: center;
 }
@@ -17,5 +17,4 @@
     width: 100%;
     left: 0;
     top: 120px;
-    z-index: -1;
 }

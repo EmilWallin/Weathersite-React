@@ -1,12 +1,14 @@
 .sun {
-    position: block;
+    position:block;
     margin: auto;
+    display: inline-block;
     width: 350px;
     height: 320px;
     background: #fbff00;
     border-radius: 50%;
     animation: floatingSun 5s infinite;
     animation-direction: alternate;
+    z-index: -10;
 }
 
 @keyframes floatingSun {
@@ -14,14 +16,14 @@
         transform: scale(1);
         transform: translateX(-10px);
         margin-top: -200px;
-        box-shadow: 20px 20px 15px 10px #fbff00;
+        box-shadow: 0px 15px 25px 20px #fbff00;
     }
     25% {
         margin-top: -198px;
     }
     50% {
         margin-top: -200px;
-        box-shadow: 0px 15px 15px 10px #fbff00;
+        box-shadow: 0px 15px 35px 20px #fbff00;
 
     }
     75% {
@@ -31,7 +33,7 @@
         transform: scale(1.03);
         transform: translateX(10px);
         margin-top: -200px;
-        box-shadow: -20px 20px 15px 10px #fbff00;
+        box-shadow: 0px 15px 25px 20px #fbff00;
 
     }
 }

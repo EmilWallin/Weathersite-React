@@ -8,9 +8,9 @@ import './weatherBox.css';
 import RainCloud from '../RainCloud';
 import SnowCloud from '../SnowCloud';
 import Sun from '../Sun';
+import Cloudy from '../Cloudy';
 //Hook
 import useGetVisuals from '../../hooks/useGetWeatherVisuals';
-
 
 function GetVisuals(weatherType, weatherAmount) {
     let amount = 0;
@@ -39,7 +39,7 @@ function GetVisuals(weatherType, weatherAmount) {
         case "clear":
             return (<div>clear {weatherAmount}</div>)
         case "cloudy":
-            return (<div>cloudy {weatherAmount}</div>)
+            return (<Cloudy></Cloudy>)
         default:
             return (<div>ingen type {weatherAmount}</div>)        
     }

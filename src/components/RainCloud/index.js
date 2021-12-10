@@ -14,7 +14,7 @@ const RainCloud = ({amount}) => {
 
     return (
         <div>
-            <div className="cloud"></div>
+            <div className="rainCloud"></div>
             {nums.map(function (n) {
                 return (
                     <RainDrop key={n} offset={{ value: n*1.7, delay: randomTime(1) }} />

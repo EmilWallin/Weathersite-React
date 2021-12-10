@@ -14,7 +14,7 @@ const SnowCloud = ({amount}) => {
 
     return (
         <div>
-             <div className="cloud" style={{background: "AliceBlue"}}></div>
+             <div className="snowCloud"></div>
             {nums.map(function (n) {
                 return (
                     <SnowFlake key={n} offset={{ value: n*1.7, delay: randomTime(1) }} />

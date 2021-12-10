@@ -4,8 +4,8 @@ import "./sun.css";
 import SunRay from "../SunRay";
 
 const Sun = () => {
-    let nums = [30];
-    for (let i = 0; i < 30; i++) {
+    let nums = [40];
+    for (let i = 0; i < 40; i++) {
         nums[i] = i;
     }
 
