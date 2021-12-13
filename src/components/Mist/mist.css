@@ -1,28 +1,33 @@
-.fogBlock {
+.mistBlock {
     position:inline-block;
     height: 125px;
 }
 
-
-.fog {
+.mist {
     position: inline block;
     margin: auto;
     margin-top: 4px;
     height: 25px;
     width: 300px;
     border-radius: 50px;
-    background: #8a8989;
+    background: #acaaaa;
     opacity: 0.2;
-    box-shadow: 0px 0px 40px 40px  #8a8989;
-    animation: fogMovement 7s infinite;
+    box-shadow: 0px 0px 30px 30px  #acaaaa;
+    animation: mistMovement 5s infinite;
 }
 
-@keyframes fogMovement {
+@keyframes mistMovement {
     from {
         opacity: 0.2;
     }
+    25% {
+        transform: translateX(200);
+    }
     50% {
-        opacity: 1;
+        opacity: 0.6;
+    }
+    75% {
+        transform: translateX(-200);
     }
     to {
         opacity: 0.2;

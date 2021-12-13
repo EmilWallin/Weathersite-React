@@ -9,6 +9,7 @@ export const Fog = () => {
             <div className="fog" style={{animationDelay:"1.2s"}}></div>
             <div className="fog" style={{animationDelay:"0.4s"}}></div>
             <div className="fog" style={{animationDelay:"1s"}}></div>
+            <div className="fog" style={{animationDelay:"0.3s"}}></div>
         </div>
     );
 };

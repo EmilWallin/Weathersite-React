@@ -1,12 +1,12 @@
 .HomePage {
   text-align: center;
   /* height: 100vh; */
-  background-color: gainsboro;
   margin: 0px;
+  height: 100%;
 }
 
 .App {
   text-align: center;
-  background-color: rgb(199, 153, 25);
-  height: 100%;
+  /* background-color: rgb(199, 153, 25);
+  height: 100%; */
 }

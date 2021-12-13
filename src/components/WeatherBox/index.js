@@ -11,6 +11,7 @@ import Sun from '../Sun';
 import Cloudy from '../Cloudy';
 import Overcast from '../Overcast';
 import Fog from '../Fog';
+import Mist from '../Mist';
 //Hook
 import useGetVisuals from '../../hooks/useGetWeatherVisuals';
 
@@ -33,6 +34,7 @@ function GetVisuals(weatherType, weatherAmount) {
 
     switch(weatherType) {
         case "rain":
+        case "drizzle":
             return (<RainCloud amount={{value: amount}}/>)
         case "snow":
             return (<SnowCloud amount={{value: amount}}></SnowCloud>)
@@ -46,6 +48,8 @@ function GetVisuals(weatherType, weatherAmount) {
             return (<Overcast></Overcast>)
         case "fog":
             return (<Fog></Fog>)
+        case "mist":
+            return (<Mist></Mist>)
         default:
             return (<div>ingen type {weatherType}</div>)        
     }

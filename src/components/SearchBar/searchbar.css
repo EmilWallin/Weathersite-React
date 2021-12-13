@@ -1,7 +1,7 @@
 .SearchBar {
     display: block;
     background-color: #76FF77;
-    border-radius: 0% 0% 100% 100%;
+    /* border-radius: 0% 0% 100% 100%; */
     min-height: 30px;
     margin: 0 auto;
     position: relative;

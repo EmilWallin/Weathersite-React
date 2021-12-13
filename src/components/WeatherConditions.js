@@ -62,7 +62,9 @@ export const type = [
     "clear",
     "cloudy",
     "overcast",
-    "fog"
+    "fog",
+    "mist",
+    "drizzle"
 
 ]
 

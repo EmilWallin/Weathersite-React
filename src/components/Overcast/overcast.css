@@ -1,11 +1,14 @@
 .overcast {
     margin: auto;
     display: block;
+    position: block;
+    height: 200px;
 }
 
 .leftMost {
     content: "";
     position: absolute;
+    display: inline;
     margin: auto;
     width: 153px;
     height: 48px;
@@ -13,7 +16,8 @@
     border-radius: 300px;
     animation: floatingOvercastSmall 5s infinite;
     animation-direction: alternate;
-    left: 34%;
+    /* left: 34%; */
+    margin-left: -215px;
     top: -2%;
     opacity: 0;
 }
@@ -41,11 +45,12 @@
 
 .left {
     content: "";
-    position: block;
+    position: absolute;
+    display: inline;
     margin: auto;
     width: 272px;
     height: 85px;
-    margin-left: 36%;
+    margin-left: -155px;
     background: #858c94;
     border-radius: 300px;
     animation: floatingOvercastBig 5s infinite;
@@ -76,7 +81,7 @@
 .rightMost {
     position: absolute;
     margin: auto;
-
+    display: inline;
     /*  SIZERATIO: 3.2 */
     width: 121px;
     height: 38px;
@@ -86,7 +91,8 @@
     animation-direction: alternate;
     opacity: 0;
     top: -4%;
-    left: 54%;
+    margin-left: 25px;
+    /* left: 54%; */
 }
 .rightMost:after,
 .rightMost:before {
@@ -114,7 +120,7 @@
 .right {
     position: absolute;
     margin: auto;
-
+    display: inline;
     /*  SIZERATIO: 3.2 */
     width: 166px;
     height: 52px;
@@ -123,7 +129,8 @@
     animation: floatingOvercastSmall 5s infinite;
     animation-direction: alternate;
     top: 6%;
-    left: 50%;
+    margin-left: 45px;
+    /* left: 50%; */
     opacity: 0;
 }
 .right:after,
