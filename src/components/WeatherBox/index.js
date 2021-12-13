@@ -1,23 +1,24 @@
-import React from 'react';
+import React from "react";
 
 //Array
 import conditionsArray from "../WeatherConditions";
 
 //Components
-import './weatherBox.css';
-import RainCloud from '../RainCloud';
-import SnowCloud from '../SnowCloud';
-import Sun from '../Sun';
-import Cloudy from '../Cloudy';
-import Overcast from '../Overcast';
-import Fog from '../Fog';
-import Mist from '../Mist';
+import "./weatherBox.css";
+import RainCloud from "../RainCloud";
+import SnowCloud from "../SnowCloud";
+import Sun from "../Sun";
+import Cloudy from "../Cloudy";
+import Overcast from "../Overcast";
+import Fog from "../Fog";
+import Mist from "../Mist";
+import Clear from "../Clear";
 //Hook
-import useGetVisuals from '../../hooks/useGetWeatherVisuals';
+import useGetVisuals from "../../hooks/useGetWeatherVisuals";
 
 function GetVisuals(weatherType, weatherAmount) {
     let amount = 0;
-    switch(weatherAmount) {
+    switch (weatherAmount) {
         case "light":
             amount = 30;
             break;
@@ -32,45 +33,78 @@ function GetVisuals(weatherType, weatherAmount) {
             break;
     }
 
-    switch(weatherType) {
+    switch (weatherType) {
         case "rain":
         case "drizzle":
-            return (<RainCloud amount={{value: amount}}/>)
+            return <RainCloud amount={{ value: amount }} />;
         case "snow":
-            return (<SnowCloud amount={{value: amount}}></SnowCloud>)
+            return <SnowCloud amount={{ value: amount }}></SnowCloud>;
         case "sun":
-            return (<Sun></Sun>)
+            return <Sun></Sun>;
         case "clear":
-            return (<div>clear {weatherAmount}</div>)
+            return <Clear></Clear>;
         case "cloudy":
-            return (<Cloudy></Cloudy>)
+            return <Cloudy></Cloudy>;
         case "overcast":
-            return (<Overcast></Overcast>)
+            return <Overcast></Overcast>;
         case "fog":
-            return (<Fog></Fog>)
+            return <Fog></Fog>;
         case "mist":
-            return (<Mist></Mist>)
+            return <Mist></Mist>;
         default:
-            return (<div>ingen type {weatherType}</div>)        
+            return <div></div>;
     }
 }
 
-export const WeatherBox = ({weather, temp}) => {
-    
-    const {weatherType, weatherAmount} = useGetVisuals(weather);
+function GetBackgroundColor(weather, localTime) {
+    let returnStr = "";
 
-    return(
-        <div className="WeatherBox">
-            {
-                GetVisuals(weatherType, weatherAmount)
-            }
+    switch (weather) {
+        case "sun":
+            returnStr = "#5ad9ff";
+            break;
+        case "overcast":
+        case "drizzle":
+        case "rain":
+            returnStr = "#d9e1e7";
+            break;
+        case "fog":
+        case "mist":
+            returnStr = "#e7e7e7";
+            break;
+        default:
+            break;
+    }
+
+    if (localTime === "") return "#e5f3f8";
+    const hour = parseInt(localTime.substr(0, 2));
+
+    if (hour >= 8 && hour <= 18 && returnStr === "") {
+        returnStr = "#a6d1e2";
+    }
+
+    if (hour < 8 || hour > 18) {
+        returnStr = "#333333";
+    }
+
+    return returnStr;
+}
+
+export const WeatherBox = ({ weather, temp, localTime }) => {
+    const { weatherType, weatherAmount } = useGetVisuals(weather);
+
+    return (
+        <div
+            className="WeatherBox"
+            style={{ background: GetBackgroundColor(weatherType, localTime) }}
+        >
+            {GetVisuals(weatherType, weatherAmount)}
             <div className="WeatherDiv" key={weather}>
                 <p className="WeatherText">{weather}</p>
                 <p className="TempText">{temp}</p>
             </div>
-            
         </div>
-    )
-}
+    );
+};
 
 export default WeatherBox;

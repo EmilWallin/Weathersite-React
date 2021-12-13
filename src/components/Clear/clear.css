@@ -1,3 +1,68 @@
 .clear {
-    
+    margin: auto;
+    display: block;
+    position: block;
+    height: 200px;
+}
+
+.clearCloud {
+    content: "";
+    position: absolute;
+    display: inline;
+    margin: auto;
+    width: 153px;
+    height: 48px;
+    background: #e3e7ec;
+    border-radius: 300px;
+    animation: floatingClearClouds 16s infinite linear;
+    /* left: 34%; */
+    margin-left: -150px;
+    top: -2%;
+    opacity: 0;
+}
+.clearCloud:after,
+.clearCloud:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: inherit;
+    border-radius: inherit;
+    z-index:-1;
+}
+.clearCloud:after {
+    width: 35%;
+    height: 120%;
+    top: -52%;
+    left: 15%;
+}
+.clearCloud:before {
+    width: 45%;
+    height: 160%;
+    top: -80%;
+    left: 40%;
+}
+
+@keyframes floatingClearClouds {
+    from {
+        transform: scale(1);
+        transform: translateX(0);
+        margin-top: 96px;
+        opacity: 0;
+    }
+    25% {
+        margin-top: 92px;
+    }
+    50% {
+        margin-top: 98px;
+        opacity: 0.1;
+    }
+    75% {
+        margin-top: 92px;
+    }
+    to {
+        transform: scale(1.03);
+        transform: translateX(200px);
+        margin-top: 96px;
+        opacity: 0;
+    }
 }

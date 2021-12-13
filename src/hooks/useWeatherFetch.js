@@ -7,9 +7,9 @@ export const useWeatherFecth = () => {
     const [location, setLocation] = useState("");
     const [weather, setWeather] = useState("");
     const [temperature, setTemperature] = useState("");
+    const [localTime, setLocalTime] = useState("");
 
     const fetchWeather = async (location) => {
-        const apiKey = process.env.REACT_APP_APIKEY;
         let obj;
         try {
             if(location !== "")
@@ -17,11 +17,10 @@ export const useWeatherFecth = () => {
                 await API(location).then(data => obj = data);
                 setWeather(obj.data.current.condition.text);
                 setTemperature(`${obj.data.current.temp_c}°C`);
+                setLocalTime(obj.data.location.localtime.substr(11));
             }
         }
         catch {
-            setWeather("");
-            setTemperature("");
             console.log(`ERROR IN fetchweather`)
         }
     }
@@ -32,6 +31,6 @@ export const useWeatherFecth = () => {
         fetchWeather(location);
     })
 
-    return {location, weather, temperature, setLocation};
+    return {weather, temperature, localTime, setLocation};
 }
 

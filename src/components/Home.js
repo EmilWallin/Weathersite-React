@@ -16,14 +16,13 @@ import WeatherBox from "./WeatherBox";
 import { useWeatherFecth } from "../hooks/useWeatherFetch";
 
 const Home = () => {
-    const { location, weather, temperature, setLocation } = useWeatherFecth();
-
+    const {weather, temperature, localTime, setLocation } = useWeatherFecth();
     return (
         <div className="HomePage">
             <div>
                 <Header />
                 <SearchBar setSearchTerm={setLocation} />
-                <WeatherBox weather={weather} temp={temperature} />
+                <WeatherBox weather={weather} temp={temperature} localTime={localTime} />
             </div>
         </div>
     );
