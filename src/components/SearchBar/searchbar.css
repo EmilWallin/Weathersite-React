@@ -18,4 +18,12 @@
     margin-bottom: 1%;
     font-family: 'M PLUS 1 Code', sans-serif;
     font-weight: 300;
+    font-size: 20pt;
+    min-height: 30px;
+}
+@media only screen and (max-width: 600px) {
+    .InputBar {
+        font-size: 16pt;
+
+    }
 }

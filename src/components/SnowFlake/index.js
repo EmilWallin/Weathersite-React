@@ -3,8 +3,8 @@ import "../SnowFlake/snowFlake.css";
 
 const SnowFlake = ({offset}) => {
     return (
-        <div style={{ marginLeft: offset.value*3}}>
-            <div className="SnowFlake" style={{animationDelay: `${offset.delay * 2}s`}}></div>
+        <div style={{ marginLeft: offset.value*2.4}}>
+            <div className="SnowFlake" style={{animationDelay: `${offset.delay * 4}s`}}></div>
         </div>
     )
 }
